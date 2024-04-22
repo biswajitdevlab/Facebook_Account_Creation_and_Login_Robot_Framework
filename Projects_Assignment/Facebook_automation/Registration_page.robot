@@ -5,11 +5,12 @@ Library   SeleniumLibrary
 Library    Process
 *** Variables ***
 ${url}=     https://www.facebook.com
-${browser}=     chrome
+${browser}=     firefox
 *** Test Cases ***
 facebook create new account
     Set Selenium Implicit Wait    10
     open the browser    ${url}    ${browser}
+    Maximize Browser Window
     click on create a new account button
     set first name     Rama
     set lastname     Das
